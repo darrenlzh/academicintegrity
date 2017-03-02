@@ -1,0 +1,35 @@
+{
+  "name": "academicintegrity",
+  "version": "1.0.0",
+  "description": "University at Buffalo, State University of New York, Academic Integrity site",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darrenlzh/academicintegrity.git"
+  },
+  "keywords": [
+    "UB",
+    "University",
+    "at",
+    "Buffalo",
+    "Academic",
+    "Integrity"
+  ],
+  "author": "Darren Lim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darrenlzh/academicintegrity/issues"
+  },
+  "homepage": "https://github.com/darrenlzh/academicintegrity#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-pug": "^3.2.0",
+    "gulp-sass": "^3.1.0",
+    "run-sequence": "^1.2.2"
+  }
+}
