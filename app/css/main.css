@@ -1,10 +1,72 @@
+@font-face {
+  font-family: 'Freeland';
+  src: url(../fonts/Freeland.eot);
+  src: url(../fonts/Freeland.ttf) format("ttf");
+  src: url(../fonts/Freeland.woff) format("woff");
+  src: url(../fonts/Freeland.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url(../fonts/SofiaWebRegular.eot);
+  src: url(../fonts/SofiaWebRegular.ttf) format("ttf");
+  src: url(../fonts/SofiaWebRegular.woff) format("woff");
+  src: url(../fonts/SofiaWebRegular.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Sofia Pro Medium';
+  src: url(../fonts/SofiaWebMedium.eot);
+  src: url(../fonts/SofiaWebMedium.ttf) format("ttf");
+  src: url(../fonts/SofiaWebMedium.woff) format("woff");
+  src: url(../fonts/SofiaWebMedium.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Sofia Pro Light';
+  src: url(../fonts/SofiaWebLight.eot);
+  src: url(../fonts/SofiaWebLight.ttf) format("ttf");
+  src: url(../fonts/SofiaWebLight.woff) format("woff");
+  src: url(../fonts/SofiaWebLight.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Sofia Pro ExtraLight';
+  src: url("../fonts/SofiaProExtraLight.eot") format("embedded-opentype");
+  src: url(../fonts/SofiaProExtraLight.ttf) format("ttf");
+  src: url(../fonts/SofiaProExtraLight.woff) format("woff");
+  src: url(../fonts/SofiaProExtraLight.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Sofia Pro UltraLight';
+  src: url(../fonts/SofiaProUltraLight.eot);
+  src: url(../fonts/SofiaProUltraLight.ttf) format("ttf");
+  src: url(../fonts/SofiaProUltraLight.woff) format("woff");
+  src: url(../fonts/SofiaProUltraLight.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'More Pro';
+  src: url(../fonts/MoreProBook.eot);
+  src: url(../fonts/MoreProBook.ttf) format("ttf");
+  src: url(../fonts/MoreProBook.woff) format("woff");
+  src: url(../fonts/MoreProBook.woff2) format("woff2"); }
+
 body {
-  margin: 0; }
+  margin: 0;
+  font-family: 'Sofia Pro', sans-serif; }
 
 header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   height: 100px;
   background: #005bbb; }
+  header .wrapper {
+    margin: 0 0 0 30px; }
+  header .logo img {
+    width: 150px;
+    height: auto; }
+  header .title {
+    font-family: 'Sofia Pro ExtraLight', sans-serif;
+    color: white;
+    margin: 15px 0 0 0; }
 
 footer {
   width: 100%; }
