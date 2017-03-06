@@ -6,6 +6,19 @@ html
   body
     header
       .wrapper
-        .logo: img(src="img/ub-logo-big.png")
+        .logo: img(src="img/ub-interlocking.png")
         .title Academic Integrity
+    - var n = 0;
+    #navmenu
+      while n < 4
+        span
+        - n++;
+    nav
+      ul
+        li: a(href="#") Home
+        li: a(href="#") About
+    .main
+      .wrapper
+
     footer
+    script(src="js/main.js")
