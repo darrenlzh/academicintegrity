@@ -50,9 +50,16 @@
 body {
   margin: 0;
   font-family: 'Sofia Pro', sans-serif; }
-  body h2 {
-    font-family: 'More Pro', serif;
-    color: #666666; }
+  body h1 {
+    font-family: 'More Pro', serif; }
+  body a {
+    text-decoration: none;
+    color: #005bbb; }
+    body a:hover {
+      text-decoration: underline; }
+  body p {
+    font-family: 'Sofia Pro Light', sans-serif;
+    font-size: 1rem; }
 
 header {
   display: flex;
@@ -73,20 +80,38 @@ header {
     color: white;
     margin: 0 0 0 10px;
     font-size: 1.4rem; }
+  @media screen and (min-width: 768px) {
+    header .wrapper {
+      min-width: 850px;
+      margin: 0 auto; } }
+
+.navwrapper {
+  display: flex;
+  flex-direction: column; }
+  @media screen and (min-width: 768px) {
+    .navwrapper {
+      flex-direction: column-reverse; } }
 
 .navbar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 45px; }
-  .navbar .page {
+  .navbar .breadcrumbs {
+    color: #666666;
     margin: 0 0 0 10px;
+    font-size: 0.8rem;
     font-family: 'Sofia Pro ExtraLight', sans-serif; }
+  @media screen and (min-width: 768px) {
+    .navbar {
+      max-width: 850px;
+      margin: 0 auto; } }
 
 #navmenu {
   width: 30px;
-  height: 22.5px;
-  position: absolute;
+  height: 23px;
+  position: relative;
   right: 10px;
   cursor: pointer; }
   #navmenu span {
@@ -117,6 +142,9 @@ header {
     bottom: 9px;
     width: 0;
     left: 50%; }
+  @media screen and (min-width: 768px) {
+    #navmenu {
+      display: none; } }
 
 nav {
   opacity: 0;
@@ -144,7 +172,7 @@ nav {
     nav li.active a {
       font-weight: bold;
       color: white;
-      background: #005bbb; }
+      background: #666666; }
   nav a {
     display: flex;
     justify-content: center;
@@ -156,21 +184,87 @@ nav {
     margin: 0 auto;
     color: #005bbb; }
     nav a:hover {
-      cursor: pointer;
-      background: #004288;
-      color: white; }
+      text-decoration: none; }
+  @media screen and (min-width: 768px) {
+    nav {
+      opacity: 1;
+      visibility: visible;
+      height: auto;
+      width: 100%;
+      background: white; }
+      nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 50px;
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 4px 0;
+        background: white;
+        border-bottom: 4px solid #666666; }
+        nav ul li {
+          height: 100%;
+          margin: 0 4px 0 4px; }
+          nav ul li:nth-child(1), nav ul li:nth-child(5) {
+            margin: 0; }
+          nav ul li.active a {
+            background: #666666; }
+          nav ul li:hover a {
+            color: white;
+            background: #666666; }
+          nav ul li a {
+            width: 100%; } }
 
 .banner {
   height: 150px;
   background-image: url(../img/main_home.jpg);
   background-size: cover;
   background-position: center; }
+  @media screen and (min-width: 768px) {
+    .banner {
+      height: 500px; } }
 
 .main {
-  height: 100vh; }
+  height: auto; }
   .main .wrapper {
-    height: 100%;
-    padding: 0 20px; }
+    height: auto;
+    padding: 0 20px 20px; }
+  @media screen and (min-width: 768px) {
+    .main .wrapper {
+      max-width: 850px;
+      margin: 0 auto; } }
 
 footer {
-  width: 100%; }
+  width: 100%;
+  height: auto;
+  background: #005bbb;
+  color: white; }
+  footer .wrapper {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px; }
+  footer .contact .info {
+    margin-left: 55px; }
+    footer .contact .info .title {
+      margin-top: 20px; }
+    footer .contact .info .phone {
+      margin-bottom: 0; }
+    footer .contact .info .fax {
+      margin-top: 0;
+      margin-bottom: 0; }
+    footer .contact .info .email {
+      margin-top: 0; }
+  footer .legal {
+    text-align: right;
+    border-top: 1px solid white;
+    margin-top: 20px; }
+  footer p {
+    font-size: 0.8rem; }
+  footer a {
+    color: white;
+    text-decoration: underline; }
+  @media screen and (min-width: 768px) {
+    footer .wrapper {
+      max-width: 850px;
+      margin: 0 auto; } }
