@@ -1,56 +1,15 @@
+- var currentPage = 'home';
 html
   head
     title Academic Integrity | University at Buffalo, State University of New York
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     link(href="css/main.css" rel="stylesheet")
   body
-    header
-      .wrapper
-        .logo: img(src="img/ub-interlocking.png")
-        .title Academic Integrity
-    .navwrapper
-      .navbar
-        .breadcrumbs Academic Integrity > Home
-        - var n = 0;
-        #navmenu
-          while n < 4
-            span
-            - n++;
-      nav#nav
-        ul
-          li.active
-            span
-            a(href="index.html") Home
-          li
-            span
-            a(href="policies.html") Policies
-          li
-            span
-            a(href="#") About Integrity
-          li
-            span
-            a(href="#") FAQ
-          li
-            span
-            a(href="#") Resources
-    .banner
+    include includes/header.pug
     .main
       .wrapper
         h1 A Community of Scholars
         p As part of our community of scholars, we know that you share a commitment to learning and discovery. And along with the privilege of scholarly membership comes an important obligation to adhere to certain principles of academic integrity, honesty, and ethics.
         p On this website, we hope you will find help and guidance to assist you as you confront intellectual challenges in your courses, research, writings, and other scholarly activities. We believe that great experiences await each of you in your personal efforts as well as your conversations and collaborations with academic colleagues. The commitment each of us makes to adhere to certain ethical principles ensures that the academic endeavors we undertake will garner us the greatest personal satisfaction and intellectual gain.
 
-    footer
-      .wrapper
-        .contact
-          .unitlockup: img(src="img/academic-affairs-lockup.png")
-          .info
-            p.title Office of the Senior Vice Provost#[br ]for Academic Affairs
-            p.address 548 Capen Hall
-            p.phone 716-645-6003
-            p.fax 716-645-2549
-            p.email #[a(href="mailto:academicaffairs@buffalo.edu") academicaffairs@buffalo.edu]
-        .legal
-          p Sample Sample Sample Sample
-
-    script(src="js/main.js")
+    include includes/footer.pug
