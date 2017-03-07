@@ -8,17 +8,24 @@ html
       .wrapper
         .logo: img(src="img/ub-interlocking.png")
         .title Academic Integrity
-    - var n = 0;
-    #navmenu
-      while n < 4
-        span
-        - n++;
-    nav
+    .navbar
+      .page Home
+      - var n = 0;
+      #navmenu
+        while n < 4
+          span
+          - n++;
+    nav#nav
       ul
-        li: a(href="#") Home
-        li: a(href="#") About
+        li.active: a(href="#") Home
+        li: a(href="#") Policies
+        li: a(href="#") About Integrity
+        li: a(href="#") FAQ
+        li: a(href="#") Resources
+    .banner
     .main
       .wrapper
+        h2 A Community of Scholars
 
     footer
     script(src="js/main.js")

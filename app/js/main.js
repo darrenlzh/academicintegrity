@@ -11,13 +11,15 @@ function ready(fn) {
 }
 
 function navMenuControl() {
-  var navmenu = document.getElementById('navmenu');
+  var navmenu = document.getElementById('navmenu'),
+      nav = document.getElementById('nav');
   navmenu.addEventListener('click', function() {
     if (this.classList.contains('open')) {
       this.classList.remove('open');
+      nav.classList.remove('open');
     } else {
       this.classList.add('open');
+      nav.classList.add('open');
     }
-    console.log('clicked');
   });
 }
