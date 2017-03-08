@@ -1,11 +1,11 @@
+- var n = 0;
 header
   .wrapper
     .logo: img(src="img/ub-interlocking.png")
     .title Academic Integrity
 .navwrapper
   .navbar
-    .breadcrumbs Academic Integrity > Home
-    - var n = 0;
+    .breadcrumbs!= breadcrumbs
     #navmenu
       while n < 4
         span
@@ -18,13 +18,13 @@ header
       li(class={active: currentPage === 'policies'})
         span
         a(href="policies.html") Policies
-      li(class={active: currentPage === 'about integrity'})
+      li(class={active: currentPage === 'integrity'})
         span
-        a(href="#") About Integrity
+        a(href="integrity.html") About Integrity
       li(class={active: currentPage === 'faq'})
         span
-        a(href="#") FAQ
+        a(href="faq.html") FAQ
       li(class={active: currentPage === 'resources'})
         span
-        a(href="#") Resources
+        a(href="resources.html") Resources
 .banner

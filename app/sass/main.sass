@@ -6,16 +6,24 @@ body
 
   h1
     font-family: 'More Pro', serif
+    font-size: 1.9rem
+
+  h2
+    font-size: 1.3rem
+    color: $ub-blue
+    margin-top: 2rem
+    margin-bottom: -0.5rem
 
   a
-    text-decoration: none
+    text-decoration: underline
     color: $ub-blue
     &:hover
-      text-decoration: underline
+      text-decoration: none
 
   p
     font-family: 'Sofia Pro Light', sans-serif
     font-size: 1rem
+    line-height: 1.4rem
 
 header
   display: flex
@@ -39,7 +47,7 @@ header
     font-size: 1.4rem
   @media screen and (min-width: $bp-medium)
     .wrapper
-      min-width: 850px
+      min-width: $wrapper-width
       margin: 0 auto
 
 .navwrapper
@@ -58,10 +66,11 @@ header
     color: $putnam-gray
     margin: 0 0 0 10px
     font-size: 0.8rem
-    font-family: 'Sofia Pro ExtraLight', sans-serif
+    font-family: 'Sofia Pro Light', sans-serif
   @media screen and (min-width: $bp-medium)
-    max-width: 850px
+    max-width: $wrapper-width
     margin: 0 auto
+    height: 40px
 
 #navmenu
   width: 30px
@@ -151,16 +160,16 @@ nav
     ul
       flex-direction: row
       justify-content: space-between
-      height: 50px
-      max-width: 850px
+      height: 40px
+      max-width: $wrapper-width
       margin: 0 auto
       padding: 4px 0
       background: white
       border-bottom: 4px solid $putnam-gray
       li
         height: 100%
-        margin: 0 4px 0 4px
-        &:nth-child(1), &:nth-child(5)
+        margin: 0 4px 0 0
+        &:nth-child(5)
           margin: 0
         &.active
           a
@@ -173,25 +182,29 @@ nav
           width: 100%
 
 .banner
-  height: 150px
+  height: 200px
   background:
     image: url(../img/main_home.jpg)
     size: cover
     position: center
   @media screen and (min-width: $bp-medium)
-    height: 500px
+    height: 450px
 
 .main
   height: auto
   // border: 2px solid black
   .wrapper
     height: auto
-    padding: 0 20px 20px
+    padding: 10px 20px 20px
+  ul.morespace
+    li
+      margin: 10px 0
 
   @media screen and (min-width: $bp-medium)
     .wrapper
-      max-width: 850px
+      max-width: $wrapper-width
       margin: 0 auto
+      padding: 30px 20px 80px
 
 footer
   width: 100%
@@ -203,10 +216,12 @@ footer
     display: flex
     flex-direction: column
     justify-content: space-between
-    padding: 20px
+    padding: 40px 20px
   .contact
     .info
       margin-left: 55px
+      p
+        line-height: normal
       .title
         margin-top: 20px
       .phone
@@ -220,12 +235,16 @@ footer
     text-align: right
     border-top: 1px solid white
     margin-top: 20px
+    p
+      &:nth-child(1)
+        margin-bottom: 0
+      &:nth-child(2)
+        margin-top: 0
   p
     font-size: 0.8rem
   a
     color: white
-    text-decoration: underline
   @media screen and (min-width: $bp-medium)
     .wrapper
-      max-width: 850px
+      max-width: $wrapper-width
       margin: 0 auto

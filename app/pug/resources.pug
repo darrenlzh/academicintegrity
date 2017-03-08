@@ -1,0 +1,21 @@
+- var currentPage = 'resources';
+- var breadcrumbs = 'Academic Integrity&nbsp;&nbsp;>&nbsp;&nbsp;<a href="index.html">Home</a>&nbsp;&nbsp;>&nbsp;&nbsp;Resources';
+html
+  head
+    title Academic Integrity | University at Buffalo, State University of New York
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(href="css/main.css" rel="stylesheet")
+  body
+    include includes/header.pug
+    .main
+      .wrapper
+        h1 Resources
+        ul.morespace
+          li #[a(href="http://ublib.buffalo.edu/libraries/workbook/") Library Skills Workbook] introduces basic research skills and resources.
+          li The #[a(href="http://www.buffalo.edu/cas/writing.html") Center for Excellence in Writing] provides free tutoring to UB students.
+          li Guidelines for citing sources can be found in three commonly used citation style guides: American Psychological Association (APA), Modern Language Association (MLA), and the Chicago Manual of Style.
+          li #[a(href="http://ublib.buffalo.edu/libraries/asl/tutorials/research.html") Research Tips] includes a section on using web resources in your research.
+          li #[a(href="http://www.ub-judiciary.buffalo.edu/") Office of Judicial Affairs and Student Advocacy] assists UB students with judicial or administrative procedures on campus.
+          li #[a(href="http://undergrad-catalog.buffalo.edu/policies/course/integrity.html") Current UB Policy] outlines UB academic integrity policies and procedures.
+
+    include includes/footer.pug
