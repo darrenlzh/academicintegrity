@@ -1,8 +1,12 @@
 ready(function(){
   navMenuControl();
   faqScrollControl();
+  var backToTop = document.getElementById('backtotop');
+  backToTop.addEventListener('click', function() {
+    bringIntoView(document.body, 500);
+  });
   window.addEventListener('scroll', function() {
-    showBackToTop();
+    showBackToTop(backToTop);
   });
 });
 
@@ -39,13 +43,12 @@ function faqScrollControl() {
   }
 }
 
-function showBackToTop() {
-  var scrollTop = document.body.scrollTop,
-      backToTop = document.getElementById('backtotop');
+function showBackToTop(elem) {
+  var scrollTop = document.body.scrollTop;
   if (scrollTop > 800) {
-    backToTop.classList.add('show');
+    elem.classList.add('show');
   } else {
-    backToTop.classList.remove('show');
+    elem.classList.remove('show');
   }
 }
 
