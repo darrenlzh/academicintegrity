@@ -196,15 +196,59 @@ nav
   .wrapper
     height: auto
     padding: 10px 20px 20px
-  ul.morespace
-    li
-      margin: 10px 0
+  ul
+    &.morespace
+      li
+        margin: 10px 0
+    &#faq
+      list-style: circle
+      padding: 0 0 0 40px
+      color: $ub-blue
+      li
+        &:hover
+          cursor: pointer
+          text-decoration: underline
+      // li::before
+      //   content: '> '
 
   @media screen and (min-width: $bp-medium)
     .wrapper
       max-width: $wrapper-width
       margin: 0 auto
       padding: 30px 20px 80px
+
+#backtotop
+  display: flex
+  flex-direction: column
+  width: 30px
+  height: auto
+  position: fixed
+  right: 10px
+  bottom: 50%
+  opacity: 0
+  visibility: hidden
+  transform: translateX(50px)
+  transition: .25s ease
+  &.show
+    opacity: 1
+    visibility: visible
+    transform: translateX(0)
+  &:hover
+    cursor: pointer
+    .shape
+      transform: rotate(180deg) translateY(5px)
+  .shape
+    width: 30px
+    transition: .25s ease
+    transform: rotate(180deg)
+    svg.ui-arrow .st0
+      fill: none
+      stroke: $putnam-gray
+      stroke-width: 10
+  .text
+    font-size: 0.6rem
+    text-align: center
+    color: $putnam-gray
 
 footer
   width: 100%
