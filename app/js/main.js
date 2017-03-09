@@ -1,6 +1,10 @@
 ready(function(){
   navMenuControl();
-  faqScrollControl();
+  var path = location.pathname,
+      subpath = path.match('faq.html');
+  if (subpath && subpath[0] === 'faq.html') {
+    faqScrollControl();
+  }
   var backToTop = document.getElementById('backtotop');
   backToTop.addEventListener('click', function() {
     bringIntoView(document.body, 500);

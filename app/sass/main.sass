@@ -7,12 +7,27 @@ body
   h1
     font-family: 'More Pro', serif
     font-size: 1.9rem
+    margin-bottom: 0
+    padding-bottom: 0.2rem
+    border-bottom: 3px solid black
+
+  h1 + *
+    margin-top: 2rem
+  h1 + h2
+    padding-top: 2rem
+
+  @media screen and (min-width: $bp-medium)
+    h1 + *:not(h2)
+      margin-top: 2rem
 
   h2
     font-size: 1.3rem
     color: $ub-blue
-    margin-top: 2rem
+    margin-top: 0
+    padding-top: 1rem
     margin-bottom: -0.5rem
+    @media screen and (min-width: $bp-medium)
+      padding-top: 2rem
 
   a
     text-decoration: underline
@@ -24,6 +39,9 @@ body
     font-family: 'Sofia Pro Light', sans-serif
     font-size: 1rem
     line-height: 1.4rem
+    @media screen and (min-width: $bp-medium)
+      &.last
+        margin-bottom: 0
 
 header
   display: flex
@@ -65,8 +83,12 @@ header
   .breadcrumbs
     color: $putnam-gray
     margin: 0 0 0 10px
-    font-size: 0.8rem
+    font-size: 0.6rem
     font-family: 'Sofia Pro Light', sans-serif
+    @media screen and (min-width: $bp-xsmall)
+      font-size: 0.7rem
+    @media screen and (min-width: $bp-small)
+      font-size: 0.8rem
   @media screen and (min-width: $bp-medium)
     max-width: $wrapper-width
     margin: 0 auto
@@ -135,7 +157,6 @@ nav
     height: 20%
     &.active
       a
-        font-weight: bold
         color: white
         background: $putnam-gray
   a
@@ -182,13 +203,27 @@ nav
           width: 100%
 
 .banner
-  height: 200px
+  height: 35vh
   background:
-    image: url(../img/main_home.jpg)
+    image: url(../img/home.jpg)
     size: cover
-    position: center
+    position: center 60%
+  &.policies
+    background:
+      image: url(../img/policies.jpg)
+      position: center 30%
+  &.integrity
+    background:
+      image: url(../img/integrity.jpg)
+      position: center 70%
+  &.faq
+    background-image: url(../img/faq.jpg)
+  &.resources
+    background:
+      image: url(../img/resources.jpg)
+      position: center 90%
   @media screen and (min-width: $bp-medium)
-    height: 450px
+    height: 56vh
 
 .main
   height: auto
