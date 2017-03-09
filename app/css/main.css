@@ -252,37 +252,40 @@ nav {
       padding: 30px 20px 80px; } }
 
 #backtotop {
-  display: flex;
-  flex-direction: column;
-  width: 30px;
-  height: auto;
-  position: fixed;
-  right: 50px;
-  bottom: 50%;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateX(50px);
-  transition: .25s ease; }
-  #backtotop.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0); }
-  #backtotop:hover {
-    cursor: pointer; }
-    #backtotop:hover .shape {
-      transform: rotate(180deg) translateY(5px); }
-  #backtotop .shape {
-    width: 30px;
-    transition: .25s ease;
-    transform: rotate(180deg); }
-    #backtotop .shape svg.ui-arrow .st0 {
-      fill: none;
-      stroke: #666666;
-      stroke-width: 10; }
-  #backtotop .text {
-    font-size: 0.6rem;
-    text-align: center;
-    color: #666666; }
+  display: none; }
+  @media screen and (min-width: 960px) {
+    #backtotop {
+      display: flex;
+      flex-direction: column;
+      width: 30px;
+      height: auto;
+      position: fixed;
+      right: 50px;
+      bottom: 50%;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(50px);
+      transition: .25s ease; }
+      #backtotop.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0); }
+      #backtotop:hover {
+        cursor: pointer; }
+        #backtotop:hover .shape {
+          transform: rotate(180deg) translateY(10px); }
+      #backtotop .shape {
+        width: 30px;
+        transition: .25s ease;
+        transform: rotate(180deg); }
+        #backtotop .shape svg.ui-arrow .st0 {
+          fill: none;
+          stroke: #666666;
+          stroke-width: 10; }
+      #backtotop .text {
+        font-size: 0.6rem;
+        text-align: center;
+        color: #666666; } }
 
 footer {
   width: 100%;
