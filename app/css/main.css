@@ -49,7 +49,7 @@
 
 body {
   margin: 0;
-  font-family: 'Sofia Pro', sans-serif; }
+  font-family: 'Sofia Pro Light', sans-serif; }
   body h1 {
     font-family: 'More Pro', serif;
     font-size: 1.9rem;
@@ -78,7 +78,6 @@ body {
     body a:hover {
       text-decoration: none; }
   body p {
-    font-family: 'Sofia Pro Light', sans-serif;
     font-size: 1rem;
     line-height: 1.4rem; }
     @media screen and (min-width: 768px) {
@@ -248,18 +247,19 @@ nav {
   height: 35vh;
   background-image: url(../img/home.jpg);
   background-size: cover;
-  background-position: center 60%; }
+  background-position: center 58%; }
   .banner.policies {
     background-image: url(../img/policies.jpg);
-    background-position: center 30%; }
+    background-position: center 60%; }
   .banner.integrity {
     background-image: url(../img/integrity.jpg);
-    background-position: center 70%; }
+    background-position: center 65%; }
   .banner.faq {
-    background-image: url(../img/faq.jpg); }
+    background-image: url(../img/faq.jpg);
+    background-position: center 47%; }
   .banner.resources {
     background-image: url(../img/resources.jpg);
-    background-position: center 90%; }
+    background-position: center 30%; }
   @media screen and (min-width: 768px) {
     .banner {
       height: 56vh; } }
