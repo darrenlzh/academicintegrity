@@ -64,8 +64,11 @@ header
     font-size: 1.4rem
   @media screen and (min-width: $bp-medium)
     .wrapper
-      min-width: $wrapper-width
+      min-width: $wrapper-width-medium
       margin: 0 auto
+  @media screen and (min-width: $bp-largest)
+    .wrapper
+      min-width: $wrapper-width-large
 
 .navwrapper
   display: flex
@@ -89,9 +92,11 @@ header
     @media screen and (min-width: $bp-small)
       font-size: 0.8rem
   @media screen and (min-width: $bp-medium)
-    max-width: $wrapper-width
+    max-width: $wrapper-width-medium
     margin: 0 auto
     height: 40px
+  @media screen and (min-width: $bp-largest)
+    max-width: $wrapper-width-large
 
 #navmenu
   width: 30px
@@ -181,7 +186,7 @@ nav
       flex-direction: row
       justify-content: space-between
       height: 40px
-      max-width: $wrapper-width
+      max-width: $wrapper-width-medium
       margin: 0 auto
       padding: 0 0 1px
       background: white
@@ -200,6 +205,8 @@ nav
             background: $putnam-gray
         a
           width: 100%
+      @media screen and (min-width: $bp-largest)
+        max-width: $wrapper-width-large
 
 .banner
   height: 35vh
@@ -249,9 +256,12 @@ nav
 
   @media screen and (min-width: $bp-medium)
     .wrapper
-      max-width: $wrapper-width
+      max-width: $wrapper-width-medium
       margin: 0 auto
       padding: 30px 20px 80px
+  @media screen and (min-width: $bp-largest)
+    .wrapper
+      max-width: $wrapper-width-large
 
 #backtotop
   display: none
@@ -261,11 +271,11 @@ nav
     width: 30px
     height: auto
     position: fixed
-    right: 50px
+    margin-left: 90vw
     bottom: 50%
     opacity: 0
     visibility: hidden
-    transform: translateX(50px)
+    transform: translateX(10vw)
     transition: .25s ease
     &.show
       opacity: 1
@@ -287,6 +297,13 @@ nav
       font-size: 0.6rem
       text-align: center
       color: $putnam-gray
+  @media screen and (min-width: $bp-larger)
+    margin-left: 85vw
+  @media screen and (min-width: $bp-largest)
+    margin-left: 85vw
+    transform: scale(1.5) translateX(10vw)
+    &.show
+      transform: scale(1.5) translateX(0)
 
 footer
   width: 100%
@@ -300,6 +317,9 @@ footer
     justify-content: space-between
     padding: 40px 20px
   .contact
+    .unitlockup img
+      width: 275px
+      height: auto
     .info
       margin-left: 55px
       p
@@ -328,5 +348,8 @@ footer
     color: white
   @media screen and (min-width: $bp-medium)
     .wrapper
-      max-width: $wrapper-width
+      max-width: $wrapper-width-medium
       margin: 0 auto
+  @media screen and (min-width: $bp-largest)
+    .wrapper
+      max-width: $wrapper-width-large

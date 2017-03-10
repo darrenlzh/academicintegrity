@@ -107,6 +107,9 @@ header {
     header .wrapper {
       min-width: 700px;
       margin: 0 auto; } }
+  @media screen and (min-width: 1681px) {
+    header .wrapper {
+      min-width: 1014px; } }
 
 .navwrapper {
   display: flex;
@@ -137,6 +140,9 @@ header {
       max-width: 700px;
       margin: 0 auto;
       height: 40px; } }
+  @media screen and (min-width: 1681px) {
+    .navbar {
+      max-width: 1014px; } }
 
 #navmenu {
   width: 30px;
@@ -242,6 +248,9 @@ nav {
             background: #666666; }
           nav ul li a {
             width: 100%; } }
+    @media screen and (min-width: 768px) and (min-width: 1681px) {
+      nav ul {
+        max-width: 1014px; } }
 
 .banner {
   height: 35vh;
@@ -283,6 +292,9 @@ nav {
       max-width: 700px;
       margin: 0 auto;
       padding: 30px 20px 80px; } }
+  @media screen and (min-width: 1681px) {
+    .main .wrapper {
+      max-width: 1014px; } }
 
 #backtotop {
   display: none; }
@@ -293,11 +305,11 @@ nav {
       width: 30px;
       height: auto;
       position: fixed;
-      right: 50px;
+      margin-left: 90vw;
       bottom: 50%;
       opacity: 0;
       visibility: hidden;
-      transform: translateX(50px);
+      transform: translateX(10vw);
       transition: .25s ease; }
       #backtotop.show {
         opacity: 1;
@@ -319,6 +331,15 @@ nav {
         font-size: 0.6rem;
         text-align: center;
         color: #666666; } }
+  @media screen and (min-width: 1140px) {
+    #backtotop {
+      margin-left: 85vw; } }
+  @media screen and (min-width: 1681px) {
+    #backtotop {
+      margin-left: 85vw;
+      transform: scale(1.5) translateX(10vw); }
+      #backtotop.show {
+        transform: scale(1.5) translateX(0); } }
 
 footer {
   width: 100%;
@@ -331,6 +352,9 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     padding: 40px 20px; }
+  footer .contact .unitlockup img {
+    width: 275px;
+    height: auto; }
   footer .contact .info {
     margin-left: 55px; }
     footer .contact .info p {
@@ -360,3 +384,6 @@ footer {
     footer .wrapper {
       max-width: 700px;
       margin: 0 auto; } }
+  @media screen and (min-width: 1681px) {
+    footer .wrapper {
+      max-width: 1014px; } }
