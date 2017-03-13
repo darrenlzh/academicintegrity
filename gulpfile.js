@@ -4,6 +4,27 @@ var pug = require('gulp-pug');
 var del = require('del');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync').create();
+var mamp = require('gulp-mamp');
+
+var options = {
+  user: 'darrenlim',
+  port: '8888',
+  site_path: '/Users/darrenlim/workspace/academicintegrity/app'
+};
+
+gulp.task('config', function(cb){
+    mamp(options, 'config', cb);
+});
+
+gulp.task('start', function(cb){
+    mamp(options, 'start', cb);
+});
+
+gulp.task('stop', function(cb){
+    mamp(options, 'stop', cb);
+});
+
+gulp.task('mamp', ['config', 'start']);
 
 gulp.task('sass', function() {
   return gulp.src('app/sass/main.sass')
@@ -22,9 +43,7 @@ gulp.task('pug', function() {
 
 gulp.task('browserSync', function() {
   browserSync.init({
-    server: {
-      baseDir: 'app'
-    }
+    proxy: 'localhost:8888'
   })
 });
 
@@ -45,7 +64,7 @@ gulp.task('build', function(callback) {
 });
 
 gulp.task('default', function(callback) {
-  runSequence(['sass', 'browserSync', 'watch'],
+  runSequence(['sass', 'mamp', 'browserSync', 'watch'],
     callback
   )
 });

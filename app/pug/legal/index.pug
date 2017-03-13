@@ -1,5 +1,5 @@
 - var currentPage = 'legal';
-- var breadcrumbs = 'Academic Integrity&nbsp;&nbsp;>&nbsp;&nbsp;<a href="../index.html">Home</a>&nbsp;&nbsp;>&nbsp;&nbsp;Legal Notices';
+- var breadcrumbs = 'Academic Integrity&nbsp;&nbsp;>&nbsp;&nbsp;<a href="../">Home</a>&nbsp;&nbsp;>&nbsp;&nbsp;Legal Notices';
 html
   head
     title Academic Integrity | University at Buffalo, State University of New York
@@ -9,8 +9,9 @@ html
     - var n = 0;
     header
       .wrapper
-        .logo: img(src="../img/ub-interlocking.png")
-        .title Academic Integrity
+        a(href="../index.html")
+          .logo: img(src="../img/ub-interlocking.png")
+          .title Academic Integrity
     .navwrapper
       .navbar
         .breadcrumbs!= breadcrumbs
@@ -41,8 +42,8 @@ html
       .wrapper
         h1 Legal Notices
         ul.morespace.nobullets
-          li: a(href="accessibility.html") Accessibility Statement
-          li: a(href="privacy.html") Privacy Statement
+          li: a(href="accessibility") Accessibility Statement
+          li: a(href="privacy") Privacy Statement
           li: a(href="http://www.buffalo.edu/equity.html") Notice of Non-Discrimination
           li: a(href="http://www.buffalo.edu/ubit/service-guides/safe-computing/dmca/reporting-alleged-copyright-infringement-.html") Reporting Alleged Copyright Infringement
 
@@ -64,5 +65,5 @@ html
             p.email #[a(href="mailto:academicaffairs@buffalo.edu") academicaffairs@buffalo.edu]
         .legal
           p © Copyright 2017, #[a(href="http://www.buffalo.edu/") University at Buffalo], All rights reserved.
-          p #[a(href="index.html") Legal Notices] | #[a(href="accessibility.html") Accessibility Statement]
+          p #[a(href="./") Legal Notices] | #[a(href="accessibility") Accessibility Statement]
     script(src="../js/main.js")

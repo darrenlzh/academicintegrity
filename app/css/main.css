@@ -91,10 +91,15 @@ header {
   height: 100px;
   background: #005bbb; }
   header .wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     margin: 0 0 0 20px; }
+    header .wrapper a {
+      display: flex;
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+      text-decoration: none; }
+      header .wrapper a:active {
+        border: 1px dotted white; }
   header .logo img {
     width: 60px;
     height: auto; }
@@ -203,7 +208,7 @@ nav {
     align-items: center;
     justify-content: space-between; }
   nav li {
-    width: 100%;
+    width: 20%;
     height: 20%; }
     nav li.active a {
       color: white;
@@ -266,7 +271,7 @@ nav {
   .banner.faq {
     background-image: url(../img/faq.jpg);
     background-position: center 47%; }
-  .banner.resources {
+  .banner.resources, .banner.legal, .banner.accessibility, .banner.privacy {
     background-image: url(../img/resources.jpg);
     background-position: center 30%; }
   @media screen and (min-width: 768px) {

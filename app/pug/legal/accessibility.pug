@@ -1,5 +1,5 @@
 - var currentPage = 'accessibility';
-- var breadcrumbs = 'Academic Integrity&nbsp;&nbsp;>&nbsp;&nbsp;<a href="../index.html">Home</a>&nbsp;&nbsp;>&nbsp;&nbsp;<a href="index.html">Legal Notices</a>&nbsp;&nbsp;>&nbsp;&nbsp;Accessibility Statement';
+- var breadcrumbs = 'Academic Integrity&nbsp;&nbsp;>&nbsp;&nbsp;<a href="../">Home</a>&nbsp;&nbsp;>&nbsp;&nbsp;<a href="./">Legal Notices</a>&nbsp;&nbsp;>&nbsp;&nbsp;Accessibility Statement';
 html
   head
     title Academic Integrity | University at Buffalo, State University of New York
@@ -9,8 +9,9 @@ html
     - var n = 0;
     header
       .wrapper
-        .logo: img(src="../img/ub-interlocking.png")
-        .title Academic Integrity
+        a(href="../index.html")
+          .logo: img(src="../img/ub-interlocking.png")
+          .title Academic Integrity
     .navwrapper
       .navbar
         .breadcrumbs!= breadcrumbs
@@ -45,7 +46,7 @@ html
         p If you have trouble accessing any portion of this site, please contact:
         ul.nobullets
           li: strong Mark A. Greenfield
-          li: em Director of Web Services
+          li Director of Web Services
           li 716-645-2811
           li: a(href="mailto:markgr@buffalo.edu") markgr@buffalo.edu
 
@@ -70,5 +71,5 @@ html
             p.email #[a(href="mailto:academicaffairs@buffalo.edu") academicaffairs@buffalo.edu]
         .legal
           p © Copyright 2017, #[a(href="http://www.buffalo.edu/") University at Buffalo], All rights reserved.
-          p #[a(href="index.html") Legal Notices] | #[a(href="accessibility.html") Accessibility Statement]
+          p #[a(href="./") Legal Notices] | #[a(href="accessibility") Accessibility Statement]
     script(src="../js/main.js")

@@ -5,8 +5,9 @@
 
 header
   .wrapper
-    .logo: img(src="img/ub-interlocking.png")
-    .title Academic Integrity
+    a(href="./")
+      .logo: img(src="img/ub-interlocking.png")
+      .title Academic Integrity
 .navwrapper
   .navbar
     .breadcrumbs!= breadcrumbs
@@ -18,17 +19,17 @@ header
     ul
       li(class={active: currentPage === 'home'})
         span
-        a(href="index.html") Home
+        a(href="./") Home
       li(class={active: currentPage === 'policies'})
         span
-        a(href="policies.html") Policies
+        a(href="policies") Policies
       li(class={active: currentPage === 'integrity'})
         span
-        a(href="integrity.html") About Integrity
+        a(href="integrity") About Integrity
       li(class={active: currentPage === 'faq'})
         span
-        a(href="faq.html") FAQ
+        a(href="faq") FAQ
       li(class={active: currentPage === 'resources'})
         span
-        a(href="resources.html") Resources
+        a(href="resources") Resources
 .banner(class=currentPage)

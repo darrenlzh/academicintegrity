@@ -49,10 +49,15 @@ header
   height: 100px
   background: $ub-blue
   .wrapper
-    display: flex
-    flex-direction: row
-    align-items: center
     margin: 0 0 0 20px
+    a
+      display: flex
+      display: inline-flex
+      flex-direction: row
+      align-items: center
+      text-decoration: none
+      &:active
+        border: 1px dotted white
   .logo
     img
       width: 60px
@@ -157,7 +162,7 @@ nav
     align-items: center
     justify-content: space-between
   li
-    width: 100%
+    width: 20%
     height: 20%
     &.active
       a
@@ -226,7 +231,7 @@ nav
     background:
       image: url(../img/faq.jpg)
       position: center 47%
-  &.resources
+  &.resources, &.legal, &.accessibility, &.privacy
     background:
       image: url(../img/resources.jpg)
       position: center 30%
