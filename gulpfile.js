@@ -15,7 +15,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('pug', function() {
-  return gulp.src('app/pug/*.pug')
+  return gulp.src(['app/pug/**/*.pug', '!app/pug/includes/*.pug'])
     .pipe(pug({ pretty: true }))
     .pipe(gulp.dest('app'))
 });
@@ -53,6 +53,6 @@ gulp.task('default', function(callback) {
 gulp.task('watch', ['browserSync', 'sass', 'pug'], function() {
   gulp.watch('app/sass/**/*.sass', ['sass']);
   gulp.watch('app/pug/**/*.pug', ['pug']);
-  gulp.watch('app/*.html', browserSync.reload);
+  gulp.watch('app/**/*.html', browserSync.reload);
   gulp.watch('app/js/**/*.js', browserSync.reload);
 });

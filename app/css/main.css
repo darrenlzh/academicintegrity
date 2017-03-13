@@ -280,6 +280,8 @@ nav {
     padding: 10px 20px 20px; }
   .main ul.morespace li {
     margin: 10px 0; }
+  .main ul.nobullets {
+    list-style: none; }
   .main ul#faq {
     list-style: circle;
     padding: 0 0 0 40px;
