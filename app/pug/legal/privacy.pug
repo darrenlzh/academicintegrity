@@ -6,38 +6,7 @@ html
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     link(href="../css/main.css" rel="stylesheet")
   body
-    - var n = 0;
-    header
-      .wrapper
-        a(href="../index.html")
-          .logo: img(src="../img/ub-interlocking.png")
-          .title Academic Integrity
-    .navwrapper
-      .navbar
-        .breadcrumbs!= breadcrumbs
-        #navmenu
-          while n < 4
-            span
-            - n++;
-      nav#nav
-        ul
-          li(class={active: currentPage === 'home'})
-            span
-            a(href="../index.html") Home
-          li(class={active: currentPage === 'policies'})
-            span
-            a(href="../policies.html") Policies
-          li(class={active: currentPage === 'integrity'})
-            span
-            a(href="../integrity.html") About Integrity
-          li(class={active: currentPage === 'faq'})
-            span
-            a(href="../faq.html") FAQ
-          li(class={active: currentPage === 'resources'})
-            span
-            a(href="../resources.html") Resources
-    .banner(class=currentPage)
-
+    include ../includes/header-legal.pug
     .main
       .wrapper
         h1 Privacy Statement
@@ -71,23 +40,4 @@ html
         h2 Disclaimer
         p The University at Buffalo Undergraduate Admissions website contains links to other independently administered sites within the University at Buffalo network and to some sites outside the “buffalo.edu” domain. We cannot be held responsible for the privacy practices or the content of such websites.
 
-    #backtotop
-      .shape
-        svg.ui-arrow(width="100%" height="40px" viewBox="0 0 145 40" style="enable-background:new 0 0 142.686 52.632;" xml:space="preserve")
-          polyline(class="st0" points="16.657,15.35 72.414,40.508 128.17,15.35")
-      .text Back to top
-
-    footer
-      .wrapper
-        .contact
-          .unitlockup: img(src="../img/undergrad-education-lockup.png")
-          .info
-            p.title Office of the Senior Vice Provost#[br ]for Academic Affairs
-            p.address 548 Capen Hall
-            p.phone 716-645-6003
-            p.fax 716-645-2549
-            p.email #[a(href="mailto:academicaffairs@buffalo.edu") academicaffairs@buffalo.edu]
-        .legal
-          p © Copyright 2017, #[a(href="http://www.buffalo.edu/") University at Buffalo], All rights reserved.
-          p #[a(href="./") Legal Notices] | #[a(href="accessibility") Accessibility Statement]
-    script(src="../js/main.js")
+    include ../includes/footer-legal.pug

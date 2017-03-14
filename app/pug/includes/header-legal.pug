@@ -1,10 +1,10 @@
-// Header for main pages
+// Header for files under legal
 
 - var n = 0;
 header
   .wrapper
-    a(href="./")
-      .logo: img(src="img/ub-interlocking.png")
+    a(href="../")
+      .logo: img(src="../img/ub-interlocking.png")
       .title Academic Integrity
 .navwrapper
   .navbar
@@ -17,17 +17,17 @@ header
     ul
       li(class={active: currentPage === 'home'})
         span
-        a(href="./") Home
+        a(href="../") Home
       li(class={active: currentPage === 'policies'})
         span
-        a(href="policies") Policies
+        a(href="../policies") Policies
       li(class={active: currentPage === 'integrity'})
         span
-        a(href="integrity") About Integrity
+        a(href="../integrity") About Integrity
       li(class={active: currentPage === 'faq'})
         span
-        a(href="faq") FAQ
+        a(href="../faq") FAQ
       li(class={active: currentPage === 'resources'})
         span
-        a(href="resources") Resources
+        a(href="../resources") Resources
 .banner(class=currentPage)
