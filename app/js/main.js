@@ -1,8 +1,8 @@
 ready(function(){
   navMenuControl();
   var path = location.pathname,
-      subpath = path.match('faq.html');
-  if (subpath && subpath[0] === 'faq.html') {
+      subpath = path.match('faq');
+  if (subpath && subpath[0] === 'faq') {
     faqScrollControl();
   }
   var backToTop = document.getElementById('backtotop');
