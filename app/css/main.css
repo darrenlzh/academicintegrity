@@ -99,7 +99,10 @@ header {
       display: inline-flex;
       flex-direction: row;
       align-items: center;
-      text-decoration: none; }
+      text-decoration: none;
+      border-bottom: none; }
+      header .wrapper a:hover {
+        border-bottom: none; }
       header .wrapper a:active {
         border: 1px dotted white; }
   header .logo img {
@@ -268,7 +271,7 @@ nav {
   height: 35vh;
   background-image: url(../img/home.jpg);
   background-size: cover;
-  background-position: center 58%; }
+  background-position: center 30%; }
   .banner.policies {
     background-image: url(../img/policies.jpg);
     background-position: center 60%; }
