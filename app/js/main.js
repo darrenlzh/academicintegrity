@@ -39,15 +39,11 @@ function navMenuControl() {
 function faqScrollControl() {
   var faq = document.getElementById('faq'),
       list = faq.getElementsByTagName('li'),
-      questionIndex = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6'],
-      questions = [];
-  for (let i=0; i<questionIndex.length; i++) {
-    var question = document.getElementById(questionIndex[i]);
-    questions.push(question);
-  }
+      questions = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6'];
   for (let i=0; i<list.length; i++) {
+    var question = document.getElementById(questions[i]);
     list[i].addEventListener('click', function(e) {
-      bringIntoView(questions[i], 500);
+      bringIntoView(question, 500);
     });
   }
 }
