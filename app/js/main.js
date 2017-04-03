@@ -42,7 +42,8 @@ function faqScrollControl() {
       questions = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6'];
   for (let i=0; i<list.length; i++) {
     list[i].addEventListener('click', function(e) {
-      bringIntoView(document.getElementById(questions[i]), 500);
+      var question = document.getElementById(questions[i]);
+      bringIntoView(question, 500);
     });
   }
 }
