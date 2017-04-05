@@ -279,11 +279,11 @@ nav {
     background-image: url(../img/integrity.jpg);
     background-position: center 65%; }
   .banner.faq {
-    background-image: url(../img/faq.jpg);
-    background-position: center 47%; }
+    background-image: url(../img/student-studying-2.jpg);
+    background-position: center 5%; }
   .banner.resources, .banner.legal, .banner.accessibility, .banner.privacy {
-    background-image: url(../img/resources.jpg);
-    background-position: center 30%; }
+    background-image: url(../img/students-studying.jpg);
+    background-position: center 10%; }
   @media screen and (min-width: 768px) {
     .banner {
       height: 56vh; } }
