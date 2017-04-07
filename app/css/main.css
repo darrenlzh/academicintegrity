@@ -254,7 +254,9 @@ nav {
           width: 100%;
           height: 100%;
           margin: 0 1px 0 0; }
-          nav ul li:nth-child(5) {
+          nav ul li:first-of-type {
+            width: 30%; }
+          nav ul li:nth-child(6) {
             margin: 0; }
           nav ul li.active a {
             background: #666666; }
@@ -274,8 +276,11 @@ nav {
   background-position: center 30%; }
   .banner.policies {
     background-image: url(../img/policies.jpg);
-    background-position: center 60%; }
+    background-position: center 65%; }
   .banner.integrity {
+    background-image: url(../img/student-studying-3.jpg);
+    background-position: center 75%; }
+  .banner.violations {
     background-image: url(../img/integrity.jpg);
     background-position: center 65%; }
   .banner.faq {

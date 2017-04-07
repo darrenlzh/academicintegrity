@@ -210,7 +210,9 @@ nav
         width: 100%
         height: 100%
         margin: 0 1px 0 0
-        &:nth-child(5)
+        &:first-of-type
+          width: 30%
+        &:nth-child(6)
           margin: 0
         &.active
           a
@@ -233,8 +235,12 @@ nav
   &.policies
     background:
       image: url(../img/policies.jpg)
-      position: center 60%
+      position: center 65%
   &.integrity
+    background:
+      image: url(../img/student-studying-3.jpg)
+      position: center 75%
+  &.violations
     background:
       image: url(../img/integrity.jpg)
       position: center 65%
