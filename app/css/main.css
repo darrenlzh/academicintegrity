@@ -255,7 +255,7 @@ nav {
           height: 100%;
           margin: 0 1px 0 0; }
           nav ul li:first-of-type {
-            width: 30%; }
+            width: 40%; }
           nav ul li:nth-child(6) {
             margin: 0; }
           nav ul li.active a {
