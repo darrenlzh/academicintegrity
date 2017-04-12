@@ -1,5 +1,8 @@
 @import 'vars'
 
+*
+  box-sizing: border-box
+
 body
   margin: 0
   font-family: 'Sofia Pro Light', sans-serif
@@ -150,6 +153,7 @@ header
     display: none
 
 nav
+  font-family: 'Sofia Pro' , sans-serif
   opacity: 0
   height: 0
   visibility: hidden
@@ -199,30 +203,64 @@ nav
     // border-bottom: 5px solid $putnam-gray
     ul
       flex-direction: row
-      justify-content: space-between
-      height: 40px
+      // justify-content: space-between
+      height: 50px
       max-width: $wrapper-width-medium
       margin: 0 auto
       padding: 0 0 1px
       background: white
-      border-bottom: 4px solid $putnam-gray
+      // border-bottom: 4px solid $putnam-gray
       li
-        width: 100%
+        flex-grow: 1
+        width: auto
         height: 100%
-        margin: 0 1px 0 0
-        &:first-of-type
-          width: 40%
+        position: relative
+        // margin: 0 1px 0 0
+        a
+          width: 100%
+          padding: 0 10px
+          // box-shadow: 0 0 5px black
+          &::after, &::before
+            content: ""
+            position: absolute
+            width: 100%
+            left: 0
+            background: $putnam-gray
+            transition: .1s ease
+          &::after
+            bottom: 0
+            height: 5px
+          &::before
+            top: 0
+            height: 0
+          span
+            transition: transform .1s ease
         &:nth-child(6)
           margin: 0
         &.active
+          z-index: 1
+          &::before, &::after
+            content: ""
+            height: 100%
+            width: 10px
+            top: 0
+            position: absolute
+          &::before
+            box-shadow: -10px 0 20px -14px inset
+            left: -10px
+          &::after
+            box-shadow: 10px 0 20px -14px inset
+            right: -10px
+        &.active, &:hover
           a
-            background: $putnam-gray
-        &:hover
-          a
-            color: white
-            background: $putnam-gray
-        a
-          width: 100%
+            color: $ub-blue
+            background: white
+            &::after
+              height: 0
+            &::before
+              height: 5px
+            span
+              transform: translateY(5px)
       @media screen and (min-width: $bp-largest)
         max-width: $wrapper-width-large
 
