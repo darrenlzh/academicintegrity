@@ -16,15 +16,15 @@ header
   nav#nav
     ul
       li(class={active: currentPage === 'home'})
-        a(href="../"): i.material-icons home
+        a(href="../"): span: i.material-icons home
       li(class={active: currentPage === 'policies'})
-        a(href="../policies") Policies
+        a(href="../policies"): span Policies
       li(class={active: currentPage === 'integrity'})
-        a(href="../integrity") About Integrity
+        a(href="../integrity"): span About Integrity
       li(class={active: currentPage === 'violations'})
-        a(href="../violations") Violations
+        a(href="../violations"): span Violations
       li(class={active: currentPage === 'faq'})
-        a(href="../faq") FAQ
+        a(href="../faq"): span FAQ
       li(class={active: currentPage === 'resources'})
-        a(href="../resources") Resources
+        a(href="../resources"): span Resources
 .banner(class=currentPage)
