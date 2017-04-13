@@ -52,13 +52,15 @@
 
 body {
   margin: 0;
-  font-family: 'Sofia Pro Light', sans-serif; }
+  font-family: 'Sofia Pro Light', sans-serif;
+  color: #666666; }
   body h1 {
     font-family: 'More Pro', serif;
     font-size: 1.9rem;
     margin-bottom: 0;
     padding-bottom: 0.2rem;
-    border-bottom: 3px solid black; }
+    color: #4d4d4d;
+    border-bottom: 3px solid #4d4d4d; }
   body h1 + * {
     margin-top: 2rem; }
   body h1 + h2 {

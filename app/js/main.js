@@ -41,9 +41,8 @@ function faqScrollControl() {
       list = faq.getElementsByTagName('li'),
       questions = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6'];
   for (let i=0; i<list.length; i++) {
-    var question = document.getElementById(questions[i]);
     list[i].addEventListener('click', function(e) {
-      bringIntoView(question, 500);
+      bringIntoView(document.getElementById(questions[i]), 500);
     });
   }
 }
