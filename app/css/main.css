@@ -308,25 +308,25 @@ nav {
   height: 35vh;
   background-image: url(../img/home.jpg);
   background-size: cover;
-  background-position: center 30%; }
+  background-position: 50% calc(30%); }
   .banner.policies {
     background-image: url(../img/policies.jpg);
-    background-position: center 65%; }
+    background-position: 50% calc(0); }
   .banner.integrity {
-    background-image: url(../img/student-studying-3.jpg);
-    background-position: center 75%; }
-  .banner.violations {
     background-image: url(../img/integrity.jpg);
-    background-position: center 65%; }
+    background-position: 50% calc(0); }
+  .banner.violations {
+    background-image: url(../img/violations.jpg);
+    background-position: 50% calc(65%); }
   .banner.faq {
-    background-image: url(../img/student-studying-2.jpg);
-    background-position: center 5%; }
+    background-image: url(../img/faq.jpg);
+    background-position: 50% calc(5%); }
   .banner.resources, .banner.legal, .banner.accessibility, .banner.privacy {
-    background-image: url(../img/students-studying.jpg);
-    background-position: center 10%; }
+    background-image: url(../img/resources.jpg);
+    background-position: 50% calc(65%); }
   @media screen and (min-width: 768px) {
     .banner {
-      height: 56vh; } }
+      height: 59vh; } }
 
 .main {
   height: auto; }
