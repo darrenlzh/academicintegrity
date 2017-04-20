@@ -84,12 +84,28 @@ body {
     body a:hover {
       text-decoration: none;
       border-bottom: 2px solid; }
+  body p, body ul, body ol {
+    text-align: justify; }
   body p {
     font-size: 1rem;
     line-height: 1.4rem; }
+    body p.quote {
+      font-style: italic;
+      margin-left: 20px;
+      margin-right: 20px; }
+      @media screen and (min-width: 768px) {
+        body p.quote {
+          margin-left: 50px;
+          margin-right: 50px; } }
+  body ul.within, body ol.within {
+    padding: 0 10px; }
     @media screen and (min-width: 768px) {
-      body p.last {
-        margin-bottom: 0; } }
+      body ul.within, body ol.within {
+        padding: 0 40px; } }
+
+@media screen and (min-width: 768px) {
+  .last {
+    margin-bottom: 0; } }
 
 header {
   display: flex;
@@ -140,10 +156,14 @@ header {
   width: 100%;
   height: 45px; }
   .navbar .breadcrumbs {
+    display: flex;
+    align-items: center;
     color: #666666;
     margin: 0 0 0 10px;
     font-size: 0.6rem;
     font-family: 'Sofia Pro Light', sans-serif; }
+    .navbar .breadcrumbs i.material-icons {
+      font-size: 0.9rem; }
     .navbar .breadcrumbs a:hover {
       border-bottom: 1px solid; }
     @media screen and (min-width: 370px) {
@@ -335,22 +355,25 @@ nav {
   .main .wrapper {
     height: auto;
     padding: 10px 20px 20px; }
-  .main ul.morespace li {
+  .main ul.morespace li, .main ol.morespace li {
     margin: 10px 0; }
-  .main ul.nobullets {
+  .main ul.nobullets, .main ol.nobullets {
     list-style: none; }
-  .main ul#faq {
+  .main ul#faq, .main ol#faq {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     list-style: circle;
     padding: 0 0 0 40px;
     color: #005bbb; }
-    .main ul#faq li {
+    .main ul#faq li, .main ol#faq li {
       text-decoration: underline; }
-      .main ul#faq li:hover {
+      .main ul#faq li:hover, .main ol#faq li:hover {
         cursor: pointer;
         text-decoration: none; }
+  .main span.highlight {
+    font-family: 'Sofia Pro Medium', sans-serif;
+    text-decoration: underline; }
   @media screen and (min-width: 768px) {
     .main .wrapper {
       max-width: 850px;
@@ -433,13 +456,14 @@ footer {
     footer .contact .info .email {
       margin-top: 0; }
   footer .legal {
-    text-align: right;
     border-top: 1px solid white;
     margin-top: 20px; }
-    footer .legal p:nth-child(1) {
-      margin-bottom: 0; }
-    footer .legal p:nth-child(2) {
-      margin-top: 0; }
+    footer .legal p {
+      text-align: right; }
+      footer .legal p:nth-child(1) {
+        margin-bottom: 0; }
+      footer .legal p:nth-child(2) {
+        margin-top: 0; }
   footer p {
     font-size: 0.8rem; }
   footer a {

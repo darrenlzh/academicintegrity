@@ -1,18 +1,14 @@
 - var currentPage = 'violations';
-- var breadcrumbs = 'Academic Integrity&nbsp;&nbsp;>&nbsp;&nbsp;<a href="./">Home</a>&nbsp;&nbsp;>&nbsp;&nbsp;Types of Violations';
+- var breadcrumbs = 'Academic Integrity&nbsp;<i class="material-icons">navigate_next</i>&nbsp;<a href="./">Home</a>&nbsp;<i class="material-icons">navigate_next</i>&nbsp;Types of Violations';
 html
-  head
-    title Academic Integrity | University at Buffalo, State University of New York
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    link(href="css/main.css" rel="stylesheet")
-    link(href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet")
+  include includes/head.pug
   body
+    include includes/gtm.pug
     include includes/header.pug
     .main
       .wrapper
         h1 Types of Violations
+        p.last Academic dishonesty includes, but is not limited to, the following:  
 
         h2 Plagiarism
         p.last Plagiarism is the act of using the words or ideas of other people and representing them as one’s own. It can consist of the large-scale copying of paragraphs and pages of text from other sources, or it can consist of the unwitting failure to credit sources of ideas and words. Plagiarism is an act that is especially offensive in the academic community, where ideas and words are held in such high regard.

@@ -2,13 +2,17 @@
 <html>
   <head>
     <title>Academic Integrity | University at Buffalo, State University of New York</title>
+    <meta name="language" content="en-US"/>
+    <meta name="author" content="Office of the Provost Web Services, University at Buffalo"/>
+    <meta name="Copyright" content="Copyright (c) 2017 University at Buffalo"/>
+    <meta name="description" content="Policies and information about academic integrity at UB."/>
+    <meta name="keywords" content="academic integrity, academics, intellectual challenges, academic responsibilities, ethics, honesty"/>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="css/main.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
   </head>
-  <body>
-    <!-- Header for main pages-->
+  <body><?php include_once( "/htdocs/lib/google/gtm/web-container.php" ); /* Google Tag Manager Service */ ?>
     <header>
       <div class="wrapper"><a href="./">
           <div class="logo"><img src="img/ub-interlocking.png"/></div>
@@ -16,7 +20,7 @@
     </header>
     <div class="navwrapper">
       <div class="navbar">
-        <div class="breadcrumbs">Academic Integrity&nbsp;&nbsp;>&nbsp;&nbsp;<a href="./">Home</a>&nbsp;&nbsp;>&nbsp;&nbsp;Types of Violations</div>
+        <div class="breadcrumbs">Academic Integrity&nbsp;<i class="material-icons">navigate_next</i>&nbsp;<a href="./">Home</a>&nbsp;<i class="material-icons">navigate_next</i>&nbsp;Types of Violations</div>
         <div id="navmenu"><span></span><span></span><span></span><span></span>
         </div>
       </div>
@@ -35,6 +39,7 @@
     <div class="main">
       <div class="wrapper">
         <h1>Types of Violations</h1>
+        <p class="last">Academic dishonesty includes, but is not limited to, the following:  </p>
         <h2>Plagiarism</h2>
         <p class="last">Plagiarism is the act of using the words or ideas of other people and representing them as one’s own. It can consist of the large-scale copying of paragraphs and pages of text from other sources, or it can consist of the unwitting failure to credit sources of ideas and words. Plagiarism is an act that is especially offensive in the academic community, where ideas and words are held in such high regard.</p>
         <h2>Copying</h2>
@@ -61,8 +66,6 @@
       </div>
       <div class="text">Back to top</div>
     </div>
-    <!-- NOTE: Footer for legal directory is in their individual .pug files-->
-    <!-- Remember to make changes in all footers-->
     <footer>
       <div class="wrapper">
         <div class="contact">

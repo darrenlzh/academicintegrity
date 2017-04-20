@@ -1,14 +1,9 @@
 - var currentPage = 'integrity';
-- var breadcrumbs = 'Academic Integrity&nbsp;&nbsp;>&nbsp;&nbsp;<a href="./">Home</a>&nbsp;&nbsp;>&nbsp;&nbsp;About Integrity';
+- var breadcrumbs = 'Academic Integrity&nbsp;<i class="material-icons">navigate_next</i>&nbsp;<a href="./">Home</a>&nbsp;<i class="material-icons">navigate_next</i>&nbsp;About Integrity';
 html
-  head
-    title Academic Integrity | University at Buffalo, State University of New York
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    link(href="css/main.css" rel="stylesheet")
-    link(href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet")
+  include includes/head.pug
   body
+    include includes/gtm.pug
     include includes/header.pug
     .main
       .wrapper
@@ -26,7 +21,7 @@ html
 
         h2 Avoiding violations of academic integrity
         p Violations of academic integrity occur when we fail to adhere to the general principles outlined above. More generally, we need to respect and give due credit to the work and ideas of others. And we must faithfully represent to others our own efforts in any work we submit. In general, we offer the following advice in order to avoid violating the academic integrity policy:
-        ul.morespace
+        ul.morespace.within
           li Clarify expectations with your instructor in advance.
           li Using the exact words of others without proper attribution violates the integrity policy, as does using others’ ideas without giving due credit.
           li Keep print-outs of all materials you consult for your work, with complete citations (including web addresses and the date retrieved for online materials). It does not matter if violations are unintentional.

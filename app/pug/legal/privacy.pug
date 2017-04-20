@@ -1,14 +1,9 @@
 - var currentPage = 'privacy';
-- var breadcrumbs = 'Academic Integrity&nbsp;&nbsp;>&nbsp;&nbsp;<a href="../">Home</a>&nbsp;&nbsp;>&nbsp;&nbsp;<a href="./">Legal Notices</a>&nbsp;&nbsp;>&nbsp;&nbsp;Privacy Statement';
+- var breadcrumbs = 'Academic Integrity&nbsp;<i class="material-icons">navigate_next</i>&nbsp;<a href="../">Home</a>&nbsp;<i class="material-icons">navigate_next</i>&nbsp;<a href="./">Legal Notices</a>&nbsp;<i class="material-icons">navigate_next</i>&nbsp;Privacy Statement';
 html
-  head
-    title Academic Integrity | University at Buffalo, State University of New York
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    link(href="../css/main.css" rel="stylesheet")
-    link(href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet")
+  include ../includes/head-legal.pug
   body
+    include ../includes/gtm.pug
     include ../includes/header-legal.pug
     .main
       .wrapper
