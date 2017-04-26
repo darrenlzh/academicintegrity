@@ -1,11 +1,23 @@
-DirectoryIndex index.html
+#
+# Parse html file as php
+#
+AddType application/x-httpd-php .htm .html
 
 RewriteEngine on
 
+#
+# Remove trailing slash
+#
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+#
+# Remove extension
+#
 RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
 RewriteRule ^ /%1 [NC,L,R]
 
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^ %{REQUEST_URI}.html [NC,L]
 
-AddType application/x-httpd-php .htm .html
+ErrorDocument 404 /error
