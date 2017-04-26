@@ -6,25 +6,25 @@ var runSequence = require('run-sequence');
 var browserSync = require('browser-sync').create();
 var mamp = require('gulp-mamp');
 
-var options = {
-  user: 'darrenlim',
-  port: '8888',
-  site_path: '/Users/darrenlim/workspace/academicintegrity/app'
-};
-
-gulp.task('config', function(cb){
-    mamp(options, 'config', cb);
-});
-
-gulp.task('start', function(cb){
-    mamp(options, 'start', cb);
-});
-
-gulp.task('stop', function(cb){
-    mamp(options, 'stop', cb);
-});
-
-gulp.task('mamp', ['config', 'start']);
+// var options = {
+//   user: 'darrenlim',
+//   port: '8888',
+//   site_path: '/Users/darrenlim/workspace/academicintegrity/app'
+// };
+//
+// gulp.task('config', function(cb){
+//     mamp(options, 'config', cb);
+// });
+//
+// gulp.task('start', function(cb){
+//     mamp(options, 'start', cb);
+// });
+//
+// gulp.task('stop', function(cb){
+//     mamp(options, 'stop', cb);
+// });
+//
+// gulp.task('mamp', ['config', 'start']);
 
 gulp.task('sass', function() {
   return gulp.src('app/sass/main.sass')
@@ -64,10 +64,16 @@ gulp.task('build', function(callback) {
 });
 
 gulp.task('default', function(callback) {
-  runSequence(['sass', 'mamp', 'browserSync', 'watch'],
+  runSequence(['sass', 'browserSync', 'watch'],
     callback
   )
 });
+//
+// gulp.task('default', function(callback) {
+//   runSequence(['sass', 'mamp', 'browserSync', 'watch'],
+//     callback
+//   )
+// });
 
 gulp.task('watch', ['browserSync', 'sass', 'pug'], function() {
   gulp.watch('app/sass/**/*.sass', ['sass']);

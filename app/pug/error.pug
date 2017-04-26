@@ -1,0 +1,14 @@
+- var currentPage = 'error';
+- var breadcrumbs = '<a href="/">Academic Integrity</a>&nbsp;<i class="material-icons">navigate_next</i>&nbsp;Page not found';
+html
+  include includes/head.pug
+  body
+    include includes/gtm.pug
+    include includes/header.pug
+    .main
+      .wrapper
+        h1 Page Not Found
+        p If you had this page bookmarked or found it in a search engine, the page may have expired. If you typed in the address, make sure you keyed it in correctly. For additional help please visit the #[a(href="http://academicintegrity.buffalo.edu") Academic Integrity homepage].
+        p.last Thank you for visiting the University at Buffalo!
+
+    include includes/footer.pug
